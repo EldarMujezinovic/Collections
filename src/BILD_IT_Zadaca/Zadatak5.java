@@ -34,6 +34,7 @@ public class Zadatak5 {
 			System.out.println(fileName + " does not exist..");
 			System.exit(1);
 		}
+		printVowels(path);
 		numberOfWords(path);
 
 	}
@@ -53,17 +54,43 @@ public class Zadatak5 {
 	public static void numberOfWords(Path path) throws IOException{
 		ArrayList<String> list = new ArrayList<>();
 		int counter = 0;
-		int stringLength = 0;
 		BufferedReader br = Files.newBufferedReader(path);
 		String line;
 		while ((line = br.readLine()) != null) {
-			list.add(line);	
-			stringLength += line.length();
+			list.add(line);
+			if(!line.isEmpty())
 			counter++;
+			
 		}
-		System.out.println(stringLength);
 		
 		System.out.println("Number of words: " + counter);
+	}
+	
+	public static void printVowels(Path path) throws IOException{
+	ArrayList<String> list = new ArrayList<>();
+	BufferedReader br = Files.newBufferedReader(path);
+	String line;
+	int vowels = 0;
+	int consonants = 0;
+	while((line = br.readLine()) != null){
+		list.add(line);
+		for(int i = 0; i < line.length(); i++){
+			if
+			(line.charAt(i) == 'a' || line.charAt(i) == 'e' || line.charAt(i) == 'i' || line.charAt(i) == 'o' || line.charAt(i) == 'u' ||
+			line.charAt(i) == 'A' || line.charAt(i) == 'E' || line.charAt(i) == 'I' || line.charAt(i) == 'O' || line.charAt(i) == 'U')
+			{
+				vowels++;
+			}
+			else
+			{
+				consonants++;
+			}
+		}
+	}
+	
+	System.out.println("Number of vowels: " + vowels);
+	System.out.println("Number of consonants: " + consonants);
+
 	}
 
 }

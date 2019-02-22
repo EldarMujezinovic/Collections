@@ -9,15 +9,12 @@ package BILD_IT_Zadaca;
  */
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Set;
@@ -29,7 +26,6 @@ public class Zadatak1 {
 
 	public static void main(String[] args) throws IOException {
 		input = new Scanner(System.in);
-		boolean valid = true;
 		System.out.println("Enter the name of the file: ");
 		String fileName = input.nextLine();
 		Path path = Paths.get(fileName); // name of the file that you have
