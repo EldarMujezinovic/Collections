@@ -34,7 +34,7 @@ public class Zadatak5 {
 			System.out.println(fileName + " does not exist..");
 			System.exit(1);
 		}
-		printVowels(path);
+		printVowelsAndConsonants(path);
 		numberOfWords(path);
 
 	}
@@ -66,7 +66,7 @@ public class Zadatak5 {
 		System.out.println("Number of words: " + counter);
 	}
 	
-	public static void printVowels(Path path) throws IOException{
+	public static void printVowelsAndConsonants(Path path) throws IOException{
 	ArrayList<String> list = new ArrayList<>();
 	BufferedReader br = Files.newBufferedReader(path);
 	String line;
