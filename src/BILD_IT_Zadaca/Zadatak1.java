@@ -63,7 +63,9 @@ public class Zadatak1 {
 		}
 
 	}
-
+	
+	
+	// prints all words from file
 	public static void writeAll(Path path) throws IOException {
 		ArrayList<String> array = new ArrayList<>();
 
@@ -79,7 +81,7 @@ public class Zadatak1 {
 		System.out.println(array);
 
 	}
-
+	// print only unique words
 	public static void writeWithoutDuplicates(Path path) throws IOException {
 		Set<String> set = new TreeSet<>();
 

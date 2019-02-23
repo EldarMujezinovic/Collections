@@ -81,7 +81,7 @@ public class Zadatak5 {
 			{
 				vowels++;
 			}
-			else
+			else if(Character.isAlphabetic(line.charAt(i)))
 			{
 				consonants++;
 			}
